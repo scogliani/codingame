@@ -1,25 +1,18 @@
-import sys
-import math
+while 1:
+    # name of enemy 1
+    enemy_1 = input()
 
-long = float(input().replace(',', '.'))
-lati = float(input().replace(',', '.'))
-n = int(input())
+    # distance to enemy 1
+    dist_1 = int(input())
 
-shorter = ""
-min = sys.maxsize
-for i in range(n):
-    raw = input().split(';')
+    # name of enemy 2
+    enemy_2 = input()
 
-    name = raw[1]
-    raw_long = float(raw[-2].replace(',', '.'))
-    raw_lati = float(raw[-1].replace(',', '.'))
+    # distance to enemy 2
+    dist_2 = int(input())
 
-    x = (raw_long - long) * math.cos(long + raw_long/2)
-    y = (raw_lati - lati)
-    d = math.sqrt(x**2 + y**2)*6371
+    # Write an action using print
 
-    if d < min:
-        min = d
-        shorter = name
+    # Enter the code here
 
-print(shorter)
+    print(enemy_1 if dist_1 < dist_2 else enemy_2)
