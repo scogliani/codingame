@@ -4,6 +4,7 @@
 #include <stdbool.h>
 
 #define SIZE 8
+#define INITIAL_POSITION 10
 
 /**
  * The while loop represents the game.
@@ -34,7 +35,7 @@ int max_element_index(int *array, size_t size)
 int main()
 {
     int mountain_h[SIZE];
-    int position = 10;
+    int position = INITIAL_POSITION;
     int i;
 
     while (true)
